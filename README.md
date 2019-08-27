@@ -1,9 +1,9 @@
 # Ejercicios Estructuras de Control
 
-Nombre:
+Nombre: Daniela Abril Vento Bustamante
 --
 
-Github Username:
+Github Username: davento
 --
 
 Instrucciones:

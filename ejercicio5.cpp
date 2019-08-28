@@ -24,5 +24,23 @@ using namespace std;
 
 int main() {
     float a, b, c, delta, x1, x2;
-
+    cout<<"Ingrese los parámetros de la función cuadrática separándolos con un espacio.\n";
+    cin>>a>>b>>c;
+    if (a==0){
+        if (b==0)
+            cout<<"No tiene solución"<<"\n";
+        else
+            cout<<"La solución es "<<(-c/b)<<"\n";
+    }
+    else{
+        delta=pow(b,2)-(4*a*c);
+        if (delta<0)
+            cout<<"No tiene solución"<<"\n";
+        else{
+            x1=(-b+(pow(delta,0.5)))/2*a;
+            x2=(-b-(pow(delta,0.5)))/2*a;
+            cout<<"Las soluciones son "<<x1<<" y "<<x2<<"\n";
+        }
+    }
+    return 0;    
 }

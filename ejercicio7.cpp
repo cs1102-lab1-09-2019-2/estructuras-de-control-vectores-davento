@@ -11,7 +11,7 @@
 
  Ingresa una opcion: 1
  Ingresa los dos numeros: 5 96
- Resultado: 111
+ Resultado: 101
 
  Continuar? y
 
@@ -41,9 +41,47 @@ void mostrarMenu() {
     cout<<"  2.- Resta\n";
     cout<<"  3.- Multiplicar\n";
     cout<<"  4.- Dividir\n";
-    cout<<"  6.- Modulo\n";
+    cout<<"  5.- Modulo\n";
 }
 
 int main() {
+    int opt, a, b, res;
+    char cont;
+    bool repeat=true;
+    while(repeat==true){
+    mostrarMenu();
+    do{
+    cout<<"Ingresa una opción: ";
+    cin>>opt;
+    }while(opt<1 || opt>5);
+    cout<<"\nIngresa los dos números: ";
+    cin>>a>>b;
+    switch(opt){
+        case 1:
+            res=a+b;
+            break;
+        case 2:
+            res=a-b;
+            break;
+        case 3:
+            res=a*b;
+            break;
+        case 4:
+            res=a/b;
+            break;
+        case 5:
+            res=a%b;
+            break;
+        default:
+            cout<<"Operador inválido";
+    }
+    cout<<"\nResultado: "<<res<<"\n\n¿Continuar?";
+    cin>>cont;
+    cout<<"\n";
+    if (cont!='y'){
+        repeat=false;
+        break;
+    }
+    }
     return 0;
 }

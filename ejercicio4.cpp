@@ -11,13 +11,28 @@ Escribir un programa que imprima lo siguiente:
 */
 
 #include <iostream>
+
 using std::cout;
 
-int main() {
-    for (int i=0; i<7; i++){
-        for (int j=0; j<7; j++){
 
-}
+int main() {
+
+	int a=7, b=2;
+
+    for (int i=1; i<a; i++){
+
+        for (int j=1;j<i+b;j++)
+
+            cout<<j;
+
+        for (int j=i+b-1;j<a;j++)
+
+            cout<<'*';
+
+    cout<<"\n";
+
+    }
 
     return 0;
+
 }
